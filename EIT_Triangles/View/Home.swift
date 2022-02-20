@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  Home.swift
 //  EIT_Triangles
 //
 //  Created by Danil Peregorodiev on 20.02.2022.
@@ -7,14 +7,16 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct Home: View {
     var body: some View {
-        Home()
+        VStack {
+            
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Home()
     }
 }
