@@ -10,32 +10,45 @@ import UIKit
 
 struct Home: View {
     var body: some View {
-        VStack() {
-            HStack (alignment: .center, spacing: 0) {
-                Triangle()
-                    .fill(.blue)
-                    .frame(width: 100, height: 100)
-                    
-                ReversedTriangle()
-                    .fill(.cyan)
-                    .frame(width: 100, height: 100)
-                Triangle()
-                    .fill(.blue)
-                    .frame(width: 100, height: 100)
-            }
-            HStack(alignment: .center, spacing: 0) {
-                ReversedTriangle()
-                    .fill(.cyan)
-                    .frame(width: 100, height: 100, alignment: .center)
-                Triangle()
-                    .fill(.blue)
-                    .frame(width: 100, height: 100)
-                ReversedTriangle()
+        
+        NavigationView {
+            VStack() {
+                
+                HStack (alignment: .center, spacing: 0) {
+                    Triangle()
+                        .fill(.blue)
+                        .frame(width: 100, height: 100)
+                        .offset(x: 50, y: 5)
+                        
+                    ReversedTriangle()
                         .fill(.cyan)
                         .frame(width: 100, height: 100)
-                
+                        .offset(y: 5)
+                    Triangle()
+                        .fill(.blue)
+                        .frame(width: 100, height: 100)
+                        .offset(x: -50, y: 5)
+                }
+                HStack(alignment: .center, spacing: 0) {
+                    ReversedTriangle()
+                        .fill(.cyan)
+                        .frame(width: 100, height: 100, alignment: .center)
+                        .offset(x: 50, y: -5)
+                    Triangle()
+                        .fill(.blue)
+                        .frame(width: 100, height: 100)
+                        .offset(y: -5)
+                    ReversedTriangle()
+                            .fill(.cyan)
+                            .frame(width: 100, height: 100)
+                            .offset(x: -50, y: -5)
+                    
+                }
             }
+            .padding()
+            .navigationTitle("EIT Triangles")
         }
+        
     }
 }
 
