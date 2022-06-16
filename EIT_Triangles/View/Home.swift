@@ -122,10 +122,10 @@ struct Points: Shape {
     
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        path.move(to: CGPoint(x: startX, y: startY))
-        path.addLine(to: CGPoint(x: x1, y: y1))
+        path.move(to: CGPoint(x: x1, y: y1))
         path.addLine(to: CGPoint(x: x2, y: y2))
         path.addLine(to: CGPoint(x: x3, y: y3))
+        path.addLine(to: CGPoint(x: x1, y: y3))
         
         return path
     }
