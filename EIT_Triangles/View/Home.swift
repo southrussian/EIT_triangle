@@ -60,6 +60,10 @@ struct Home: View {
                         .frame(width: 50, height: 50)
                         .offset(x: -46)
                     
+                    Points()
+                        .fill(.red)
+                        .frame(width: 1000, height: 1000)
+                    
                 }
             }
             .frame(width: 100, height: 100)
@@ -103,4 +107,26 @@ struct ReversedTriangle: Shape {
     }
 }
 
+struct Points: Shape {
+    let startX: CGFloat = 1
+    let startY: CGFloat = 1
 
+    
+    let x1: CGFloat = 470.0
+    let x2: CGFloat = 469.0
+    let x3: CGFloat = 463.0
+    
+    let y1: CGFloat = 433.0
+    let y2: CGFloat = 469.0
+    let y3: CGFloat = 432.0
+    
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.move(to: CGPoint(x: startX, y: startY))
+        path.addLine(to: CGPoint(x: x1, y: y1))
+        path.addLine(to: CGPoint(x: x2, y: y2))
+        path.addLine(to: CGPoint(x: x3, y: y3))
+        
+        return path
+    }
+}
