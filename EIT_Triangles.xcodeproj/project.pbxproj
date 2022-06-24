@@ -15,6 +15,7 @@
 		586C3DDB286611DC003FC22D /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586C3DDA286611DC003FC22D /* NewsView.swift */; };
 		586C3DDE28661257003FC22D /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586C3DDD28661257003FC22D /* NewsModel.swift */; };
 		586FBEDD286643A600656C8F /* News.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 586FBEDB286643A600656C8F /* News.xcdatamodeld */; };
+		586FBEE02866452700656C8F /* Doctors.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 586FBEDE2866452700656C8F /* Doctors.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		586C3DDA286611DC003FC22D /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		586C3DDD28661257003FC22D /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		586FBEDC286643A600656C8F /* News.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = News.xcdatamodel; sourceTree = "<group>"; };
+		586FBEDF2866452700656C8F /* Doctors.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Doctors.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				586FBEDB286643A600656C8F /* News.xcdatamodeld */,
+				586FBEDE2866452700656C8F /* Doctors.xcdatamodeld */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			files = (
 				584806FA27C2C4F2008E4A3C /* ContentView.swift in Sources */,
 				586C3DDB286611DC003FC22D /* NewsView.swift in Sources */,
+				586FBEE02866452700656C8F /* Doctors.xcdatamodeld in Sources */,
 				5848070727C2C672008E4A3C /* Home.swift in Sources */,
 				584806F827C2C4F2008E4A3C /* EIT_TrianglesApp.swift in Sources */,
 				586FBEDD286643A600656C8F /* News.xcdatamodeld in Sources */,
@@ -390,6 +394,16 @@
 			);
 			currentVersion = 586FBEDC286643A600656C8F /* News.xcdatamodel */;
 			path = News.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		586FBEDE2866452700656C8F /* Doctors.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				586FBEDF2866452700656C8F /* Doctors.xcdatamodel */,
+			);
+			currentVersion = 586FBEDF2866452700656C8F /* Doctors.xcdatamodel */;
+			path = Doctors.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
