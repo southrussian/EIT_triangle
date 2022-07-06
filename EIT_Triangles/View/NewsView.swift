@@ -14,7 +14,7 @@ struct NewsView: View {
                 
             }
         }
-        .navigationTitle("")
+        .navigationTitle("NEWS")
     }
 }
 

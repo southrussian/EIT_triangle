@@ -5,70 +5,87 @@
 //  Created by Danil Peregorodiev on 20.02.2022.
 //
 
+/// тз Алексанян: до 10 сентября представить рабочий прототип для работы с двумя аппаратами эит.
+///
+/// реализация управления - изменение частоты тока при удаленной работе
+///
+/// 1. Пациенты. вью для отображения медкарты, переход к аппарату эит для просмотра картины по сетке конечных элементов
+///
+/// 2. Новости. вью для новостной ленты - берем api с новостями медицинской тематики
+///
+/// 3. личный кабинет врача
+
+
+
 import SwiftUI
 import UIKit
 
 struct Home: View {
     var body: some View {
         
-        NavigationView {
-            VStack(spacing: 1) {
-                
-//                HStack (alignment: .center, spacing: 0) {
-//                    ReversedTriangle()
-//                        .fill(.cyan)
-//                        .frame(width: 50, height: 50)
-//                        .offset(x: 46)
-//                    Triangle()
-//                        .fill(.blue)
-//                        .frame(width: 50, height: 50)
-//                        .offset(x: 23)
+//        NavigationView {
+//            VStack(spacing: 1) {
 //
-//                    ReversedTriangle()
-//                        .fill(.cyan)
-//                        .frame(width: 50, height: 50)
-////                        .offset(y: 5)
-//                    Triangle()
-//                        .fill(.blue)
-//                        .frame(width: 50, height: 50)
-//                        .offset(x: -23)
-//                    ReversedTriangle()
-//                        .fill(.cyan)
-//                        .frame(width: 50, height: 50)
-//                        .offset(x: -46)
+////                HStack (alignment: .center, spacing: 0) {
+////                    ReversedTriangle()
+////                        .fill(.cyan)
+////                        .frame(width: 50, height: 50)
+////                        .offset(x: 46)
+////                    Triangle()
+////                        .fill(.blue)
+////                        .frame(width: 50, height: 50)
+////                        .offset(x: 23)
+////
+////                    ReversedTriangle()
+////                        .fill(.cyan)
+////                        .frame(width: 50, height: 50)
+//////                        .offset(y: 5)
+////                    Triangle()
+////                        .fill(.blue)
+////                        .frame(width: 50, height: 50)
+////                        .offset(x: -23)
+////                    ReversedTriangle()
+////                        .fill(.cyan)
+////                        .frame(width: 50, height: 50)
+////                        .offset(x: -46)
+////                }
+//
+//                HStack(alignment: .center, spacing: 0) {
+////                    Triangle()
+////                        .fill(.blue)
+////                        .frame(width: 50, height: 50)
+////                        .offset(x: 46)
+////                    ReversedTriangle()
+////                        .fill(.cyan)
+////                        .frame(width: 50, height: 50, alignment: .center)
+////                        .offset(x: 23)
+////                    Triangle()
+////                        .fill(.blue)
+////                        .frame(width: 50, height: 50)
+//////                        .offset(y: -5)
+////                    ReversedTriangle()
+////                            .fill(.cyan)
+////                            .frame(width: 50, height: 50)
+////                            .offset(x: -23)
+////                    Triangle()
+////                        .fill(.blue)
+////                        .frame(width: 50, height: 50)
+////                        .offset(x: -46)
+//
+//                    Points()
+//                        .fill(.red)
+//                        .frame(width: 1000, height: 1000)
+//
 //                }
-
-                HStack(alignment: .center, spacing: 0) {
-//                    Triangle()
-//                        .fill(.blue)
-//                        .frame(width: 50, height: 50)
-//                        .offset(x: 46)
-//                    ReversedTriangle()
-//                        .fill(.cyan)
-//                        .frame(width: 50, height: 50, alignment: .center)
-//                        .offset(x: 23)
-//                    Triangle()
-//                        .fill(.blue)
-//                        .frame(width: 50, height: 50)
-////                        .offset(y: -5)
-//                    ReversedTriangle()
-//                            .fill(.cyan)
-//                            .frame(width: 50, height: 50)
-//                            .offset(x: -23)
-//                    Triangle()
-//                        .fill(.blue)
-//                        .frame(width: 50, height: 50)
-//                        .offset(x: -46)
-                    
-                    Points()
-                        .fill(.red)
-                        .frame(width: 1000, height: 1000)
-                    
-                }
-            }
-            .frame(width: 100, height: 100)
-            .padding()
-            .navigationTitle("EIT Triangles")
+//            }
+//            .frame(width: 100, height: 100)
+//            .padding()
+//            .navigationTitle("EIT Triangles")
+//
+//        }
+        
+        
+        TabView {
             
         }
         
