@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5807D4A928913F9300D7B484 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5807D4A828913F9300D7B484 /* CachedAsyncImage */; };
+		5807D4AE28913FEC00D7B484 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5807D4AD28913FEC00D7B484 /* APIClient.swift */; };
+		5807D4B128958C3400D7B484 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 5807D4B028958C3400D7B484 /* SwiftyJSON */; };
+		5807D4B428958CB400D7B484 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5807D4B328958CB400D7B484 /* SDWebImageSwiftUI */; };
 		584806F827C2C4F2008E4A3C /* EIT_TrianglesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584806F727C2C4F2008E4A3C /* EIT_TrianglesApp.swift */; };
 		584806FA27C2C4F2008E4A3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584806F927C2C4F2008E4A3C /* ContentView.swift */; };
 		584806FC27C2C4F4008E4A3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 584806FB27C2C4F4008E4A3C /* Assets.xcassets */; };
@@ -19,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5807D4AD28913FEC00D7B484 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		584806F427C2C4F2008E4A3C /* EIT_Triangles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EIT_Triangles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		584806F727C2C4F2008E4A3C /* EIT_TrianglesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EIT_TrianglesApp.swift; sourceTree = "<group>"; };
 		584806F927C2C4F2008E4A3C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,12 +41,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5807D4B428958CB400D7B484 /* SDWebImageSwiftUI in Frameworks */,
+				5807D4B128958C3400D7B484 /* SwiftyJSON in Frameworks */,
+				5807D4A928913F9300D7B484 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5807D4AC28913FDF00D7B484 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5807D4AD28913FEC00D7B484 /* APIClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		584806EB27C2C4F2008E4A3C = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +77,7 @@
 		584806F627C2C4F2008E4A3C /* EIT_Triangles */ = {
 			isa = PBXGroup;
 			children = (
+				5807D4AC28913FDF00D7B484 /* API */,
 				586FBEDA2866438400656C8F /* DataModel */,
 				586C3DDC28661242003FC22D /* Model */,
 				5848070527C2C65D008E4A3C /* View */,
@@ -122,6 +139,11 @@
 			dependencies = (
 			);
 			name = EIT_Triangles;
+			packageProductDependencies = (
+				5807D4A828913F9300D7B484 /* CachedAsyncImage */,
+				5807D4B028958C3400D7B484 /* SwiftyJSON */,
+				5807D4B328958CB400D7B484 /* SDWebImageSwiftUI */,
+			);
 			productName = EIT_Triangles;
 			productReference = 584806F427C2C4F2008E4A3C /* EIT_Triangles.app */;
 			productType = "com.apple.product-type.application";
@@ -150,6 +172,11 @@
 				Base,
 			);
 			mainGroup = 584806EB27C2C4F2008E4A3C;
+			packageReferences = (
+				5807D4A728913F9300D7B484 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				5807D4AF28958C3400D7B484 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				5807D4B228958CB400D7B484 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 584806F527C2C4F2008E4A3C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -179,6 +206,7 @@
 				584806FA27C2C4F2008E4A3C /* ContentView.swift in Sources */,
 				586C3DDB286611DC003FC22D /* NewsView.swift in Sources */,
 				586FBEE02866452700656C8F /* Doctors.xcdatamodeld in Sources */,
+				5807D4AE28913FEC00D7B484 /* APIClient.swift in Sources */,
 				5848070727C2C672008E4A3C /* Home.swift in Sources */,
 				584806F827C2C4F2008E4A3C /* EIT_TrianglesApp.swift in Sources */,
 				586FBEDD286643A600656C8F /* News.xcdatamodeld in Sources */,
@@ -385,6 +413,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5807D4A728913F9300D7B484 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		5807D4AF28958C3400D7B484 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		5807D4B228958CB400D7B484 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5807D4A828913F9300D7B484 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5807D4A728913F9300D7B484 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+		5807D4B028958C3400D7B484 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5807D4AF28958C3400D7B484 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		5807D4B328958CB400D7B484 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5807D4B228958CB400D7B484 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		586FBEDB286643A600656C8F /* News.xcdatamodeld */ = {
