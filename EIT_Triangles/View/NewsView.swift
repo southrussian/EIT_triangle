@@ -9,34 +9,45 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct NewsView: View {
-    @StateObject var list = GetData()
+    @ObservedObject var newsFeed = NewsFeed()
     var body: some View {
         NavigationView {
-            List(list.news) { i in
-                VStack {
-                    if i.image != "" {
-                        WebImage(url: URL(string: i.image)!, options: .highPriority, context: nil)
-                            .resizable()
-                            .frame(width: 200, height: 150)
-                            .cornerRadius(10)
-                    }
-                    
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text(i.title).fontWeight(.heavy)
-                        Text(i.desc).lineLimit(2)
-                    }
-
-                    
-
-
-                }.padding(.vertical, 15)
+            List(newsFeed) { (article: NewsListItem) in
+                NavigationLink(destination: NewsListItemView(article: article)) {
+                    NewsListItemListView(article: article)
+                        .onAppear {
+                            self.newsFeed.loadMoreArticles(currentItem: article)
+                        }
+                }
+                
             }
-            
             .navigationTitle("Новости")
-            
-            
         }
-        
+    }
+}
+
+struct NewsListItemView: View {
+    var article: NewsListItem
+    var body: some View {
+        VStack {
+            URLWebView(URLToDisplay: URL(string: article.url)!)
+                .edgesIgnoringSafeArea(.all)
+                .navigationTitle(article.title)
+        }
+    }
+}
+
+struct NewsListItemListView: View {
+    var article: NewsListItem
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text("\(article.title)")
+                    .font(.headline)
+                Text("\(article.author ?? "No author")")
+                    .font(.subheadline)
+            }
+        }
     }
 }
 
