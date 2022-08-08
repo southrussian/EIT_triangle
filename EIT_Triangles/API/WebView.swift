@@ -7,20 +7,21 @@
 
 import SwiftUI
 import WebKit
-
-struct URLWebView: UIViewRepresentable {
+ 
+struct UrlWebView: UIViewRepresentable {
     typealias UIViewType = WKWebView
-    
-    var URLToDisplay: URL
-    
+     
+    var urlToDisplay: URL
+     
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
-        webView.load(URLRequest(url: URLToDisplay))
-        
+         
+        webView.load(URLRequest(url: urlToDisplay))
+         
         return webView
     }
-    
+     
     func updateUIView(_ uiView: WKWebView, context: Context) {
-        
+         
     }
 }

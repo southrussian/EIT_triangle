@@ -8,8 +8,52 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct NewsView: View {
+//struct NewsView: View {
+//    @ObservedObject var newsFeed = NewsFeed()
+//    var body: some View {
+//        NavigationView {
+//            List(newsFeed) { (article: NewsListItem) in
+//                NavigationLink(destination: NewsListItemView(article: article)) {
+//                    NewsListItemListView(article: article)
+//                        .onAppear {
+//                            self.newsFeed.loadMoreArticles(currentItem: article)
+//                        }
+//                }
+//
+//            }
+//            .navigationTitle("Новости")
+//        }
+//    }
+//}
+//
+//struct NewsListItemView: View {
+//    var article: NewsListItem
+//    var body: some View {
+//        VStack {
+//            URLWebView(URLToDisplay: URL(string: article.url)!)
+//                .edgesIgnoringSafeArea(.all)
+//                .navigationTitle(article.title)
+//        }
+//    }
+//}
+//
+//struct NewsListItemListView: View {
+//    var article: NewsListItem
+//    var body: some View {
+//        HStack {
+//            VStack(alignment: .leading) {
+//                Text("\(article.title)")
+//                    .font(.headline)
+//                Text("\(article.author ?? "No author")")
+//                    .font(.subheadline)
+//            }
+//        }
+//    }
+//}
+
+struct NewsFeedView: View {
     @ObservedObject var newsFeed = NewsFeed()
+     
     var body: some View {
         NavigationView {
             List(newsFeed) { (article: NewsListItem) in
@@ -17,34 +61,36 @@ struct NewsView: View {
                     NewsListItemListView(article: article)
                         .onAppear {
                             self.newsFeed.loadMoreArticles(currentItem: article)
-                        }
+                    }
                 }
-                
             }
-            .navigationTitle("Новости")
+        .navigationBarTitle("Новости")
         }
     }
 }
-
+ 
 struct NewsListItemView: View {
     var article: NewsListItem
+     
     var body: some View {
         VStack {
-            URLWebView(URLToDisplay: URL(string: article.url)!)
+            UrlWebView(urlToDisplay: URL(string: article.url)!)
                 .edgesIgnoringSafeArea(.all)
-                .navigationTitle(article.title)
+                .navigationBarTitle(article.title)
         }
     }
 }
-
+ 
 struct NewsListItemListView: View {
     var article: NewsListItem
+     
     var body: some View {
         HStack {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 7) {
                 Text("\(article.title)")
                     .font(.headline)
-                Text("\(article.author ?? "No author")")
+                
+                Text("\(article.author ?? "Без авторства")")
                     .font(.subheadline)
             }
         }
@@ -53,6 +99,6 @@ struct NewsListItemListView: View {
 
 struct NewsView_Previews: PreviewProvider {
     static var previews: some View {
-        NewsView()
+        NewsFeedView()
     }
 }

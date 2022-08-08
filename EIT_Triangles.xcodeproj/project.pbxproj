@@ -18,8 +18,7 @@
 		584806FF27C2C4F4008E4A3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 584806FE27C2C4F4008E4A3C /* Preview Assets.xcassets */; };
 		5848070727C2C672008E4A3C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848070627C2C672008E4A3C /* Home.swift */; };
 		586C3DDB286611DC003FC22D /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586C3DDA286611DC003FC22D /* NewsView.swift */; };
-		586FBEDD286643A600656C8F /* News.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 586FBEDB286643A600656C8F /* News.xcdatamodeld */; };
-		586FBEE02866452700656C8F /* Doctors.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 586FBEDE2866452700656C8F /* Doctors.xcdatamodeld */; };
+		58FA3F6D28A0659B002FD9C8 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA3F6C28A0659B002FD9C8 /* SignIn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +31,7 @@
 		584806FE27C2C4F4008E4A3C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5848070627C2C672008E4A3C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		586C3DDA286611DC003FC22D /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
-		586FBEDC286643A600656C8F /* News.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = News.xcdatamodel; sourceTree = "<group>"; };
-		586FBEDF2866452700656C8F /* Doctors.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Doctors.xcdatamodel; sourceTree = "<group>"; };
+		58FA3F6C28A0659B002FD9C8 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +101,7 @@
 			children = (
 				5848070627C2C672008E4A3C /* Home.swift */,
 				586C3DDA286611DC003FC22D /* NewsView.swift */,
+				58FA3F6C28A0659B002FD9C8 /* SignIn.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,8 +116,6 @@
 		586FBEDA2866438400656C8F /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				586FBEDB286643A600656C8F /* News.xcdatamodeld */,
-				586FBEDE2866452700656C8F /* Doctors.xcdatamodeld */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -204,13 +201,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				584806FA27C2C4F2008E4A3C /* ContentView.swift in Sources */,
+				58FA3F6D28A0659B002FD9C8 /* SignIn.swift in Sources */,
 				5807D4B82896BA4A00D7B484 /* WebView.swift in Sources */,
 				586C3DDB286611DC003FC22D /* NewsView.swift in Sources */,
-				586FBEE02866452700656C8F /* Doctors.xcdatamodeld in Sources */,
 				5807D4AE28913FEC00D7B484 /* APIClient.swift in Sources */,
 				5848070727C2C672008E4A3C /* Home.swift in Sources */,
 				584806F827C2C4F2008E4A3C /* EIT_TrianglesApp.swift in Sources */,
-				586FBEDD286643A600656C8F /* News.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,29 +454,6 @@
 			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		586FBEDB286643A600656C8F /* News.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				586FBEDC286643A600656C8F /* News.xcdatamodel */,
-			);
-			currentVersion = 586FBEDC286643A600656C8F /* News.xcdatamodel */;
-			path = News.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		586FBEDE2866452700656C8F /* Doctors.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				586FBEDF2866452700656C8F /* Doctors.xcdatamodel */,
-			);
-			currentVersion = 586FBEDF2866452700656C8F /* Doctors.xcdatamodel */;
-			path = Doctors.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 584806EC27C2C4F2008E4A3C /* Project object */;
 }

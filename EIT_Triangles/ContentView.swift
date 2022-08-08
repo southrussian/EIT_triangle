@@ -12,7 +12,7 @@ struct ContentView: View {
         //Home()
         
         TabView {
-            NewsView()
+            NewsFeedView()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Главная")
