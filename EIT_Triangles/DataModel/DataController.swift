@@ -26,7 +26,7 @@ class DataController: ObservableObject {
             print("Failed to save the data")
         }
     }
-    func addPatient(fullname: String, age: Int16, diagnosis: String, eitlink: String, context: NSManagedObjectContext) {
+    func addPatient(fullname: String, age: String, diagnosis: String, eitlink: String, context: NSManagedObjectContext) {
         let patient = Patients(context: context)
         
         patient.id = UUID()
@@ -35,10 +35,11 @@ class DataController: ObservableObject {
         patient.diangosis = diagnosis
         patient.eitlink = eitlink
         
+        
         save(context: context)
     }
     
-    func editPatient(patient: Patients, fullname: String, age: Int16, diagnosis: String, eitlink: String, context: NSManagedObjectContext) {
+    func editPatient(patient: Patients, fullname: String, age: String, diagnosis: String, eitlink: String, context: NSManagedObjectContext) {
         
         patient.age = age
         patient.fullname = fullname
