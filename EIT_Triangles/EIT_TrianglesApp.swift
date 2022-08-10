@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct EIT_TrianglesApp: App {
+    @State private var dataController = DataController()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }
