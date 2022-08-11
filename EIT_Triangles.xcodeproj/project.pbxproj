@@ -21,6 +21,7 @@
 		586C4B6A28A1B0D000C3A9D7 /* Patients.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 586C4B6828A1B0D000C3A9D7 /* Patients.xcdatamodeld */; };
 		586C4B6E28A1B35D00C3A9D7 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586C4B6D28A1B35D00C3A9D7 /* DataController.swift */; };
 		586C4B7128A3E84200C3A9D7 /* AddPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586C4B7028A3E84200C3A9D7 /* AddPatient.swift */; };
+		586C4B7328A5494C00C3A9D7 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586C4B7228A5494C00C3A9D7 /* TimeFormatting.swift */; };
 		58FA3F6D28A0659B002FD9C8 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA3F6C28A0659B002FD9C8 /* SignIn.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		586C4B6928A1B0D000C3A9D7 /* Patients.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Patients.xcdatamodel; sourceTree = "<group>"; };
 		586C4B6D28A1B35D00C3A9D7 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		586C4B7028A3E84200C3A9D7 /* AddPatient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPatient.swift; sourceTree = "<group>"; };
+		586C4B7228A5494C00C3A9D7 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 		58FA3F6C28A0659B002FD9C8 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 		586C4B6F28A3E81C00C3A9D7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				586C4B7228A5494C00C3A9D7 /* TimeFormatting.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				5807D4AE28913FEC00D7B484 /* APIClient.swift in Sources */,
 				586C4B6A28A1B0D000C3A9D7 /* Patients.xcdatamodeld in Sources */,
 				5848070727C2C672008E4A3C /* Home.swift in Sources */,
+				586C4B7328A5494C00C3A9D7 /* TimeFormatting.swift in Sources */,
 				584806F827C2C4F2008E4A3C /* EIT_TrianglesApp.swift in Sources */,
 				586C4B7128A3E84200C3A9D7 /* AddPatient.swift in Sources */,
 			);

@@ -34,7 +34,7 @@ class DataController: ObservableObject {
         patient.fullname = fullname
         patient.diangosis = diagnosis
         patient.eitlink = eitlink
-        
+        patient.date = Date()
         
         save(context: context)
     }
@@ -45,6 +45,7 @@ class DataController: ObservableObject {
         patient.fullname = fullname
         patient.diangosis = diagnosis
         patient.eitlink = eitlink
+        patient.date = Date()
         
         save(context: context)
     }
