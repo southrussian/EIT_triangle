@@ -18,10 +18,10 @@ struct ContentView: View {
                     Text("Главная")
                 }
             
-            Text("Пациенты")
-                .tabItem {
-                    Image(systemName: "person.3.sequence")
-                    Text("Пациенты")
+                PatientsView()
+                    .tabItem {
+                        Image(systemName: "person.3.sequence")
+                        Text("Пациенты")
                 }
             
             Text("Личный кабинет")
