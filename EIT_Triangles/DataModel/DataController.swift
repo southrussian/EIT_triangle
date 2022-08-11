@@ -32,7 +32,7 @@ class DataController: ObservableObject {
         patient.id = UUID()
         patient.age = age
         patient.fullname = fullname
-        patient.diangosis = diagnosis
+        patient.diagnosis = diagnosis
         patient.eitlink = eitlink
         patient.date = Date()
         
@@ -43,7 +43,7 @@ class DataController: ObservableObject {
         
         patient.age = age
         patient.fullname = fullname
-        patient.diangosis = diagnosis
+        patient.diagnosis = diagnosis
         patient.eitlink = eitlink
         patient.date = Date()
         

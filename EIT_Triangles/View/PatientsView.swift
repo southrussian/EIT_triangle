@@ -51,12 +51,24 @@ struct PatientsView: View {
                         Label("Добавить пациента", systemImage: "plus.circle")
                     }
                 }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                    
+                }
+                
+            }
+            .sheet(isPresented: $showingAddView) {
+                AddPatient()
             }
         }
+        .navigationViewStyle(.stack)
     }
     
     private func deletePatient(offsets: IndexSet) {
-        
+        withAnimation {
+            offsets.map { patients[$0] } .forEach(managedObjContext.delete)
+            DataController().save(context: managedObjContext)
+        }
     }
 }
 
