@@ -22,7 +22,7 @@ struct PatientsView: View {
                     .padding(.horizontal)
                 List {
                     ForEach(patients) { patients in
-                        NavigationLink(destination: Text(patients.fullname!)) {
+                        NavigationLink(destination: EditPatientView(patients: patients)) {
                             HStack {
                                 VStack(alignment: .leading, spacing: 6) {
                                     Text(patients.fullname!)

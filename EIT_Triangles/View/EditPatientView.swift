@@ -9,9 +9,9 @@ import SwiftUI
 
 struct EditPatientView: View {
     @Environment(\.managedObjectContext) var managedObjContext
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) var patients: FetchedResults<Patients>
+    @Environment(\.dismiss) var dismiss
     
-    var patient: FetchedResults<Patients>.Element
+    var patients: FetchedResults<Patients>.Element
     
     @State private var fullname = ""
     @State private var age = ""
@@ -22,13 +22,48 @@ struct EditPatientView: View {
         Form {
             Section {
                 VStack {
-                    TextField("\(patient.fullname!)", text: $fullname)
+                    TextField("\(patients.fullname!)", text: $fullname)
+                        .onAppear {
+                            fullname = patients.fullname!
+                            age = patients.age!
+                            eitlink = patients.eitlink!
+                            diagnosis = patients.diagnosis!
+                        }
+                    
                     Divider()
-                    TextField("\(patient.age!)", text: $age)
+                    
+                    TextField("\(patients.age!)", text: $age)
+                        .onAppear {
+                            age = patients.age!
+                        }
+                    
                     Divider()
-                    TextField("\(patient.diagnosis!)", text: $diagnosis)
+
+                    TextField("\(patients.diagnosis!)", text: $diagnosis)
+                        .onAppear {
+                            diagnosis = patients.diagnosis!
+                        }
                     Divider()
-                    TextField("\(patient.eitlink!)", text: $eitlink)
+                    
+                    TextField("\(patients.eitlink!)", text: $eitlink)
+                        .onAppear {
+                            eitlink = patients.eitlink!
+                        }
+                    
+//                    Divider()
+//                    TextField("\(patient.age!)", text: $age)
+//                    Divider()
+//                    TextField("\(patient.diagnosis!)", text: $diagnosis)
+//                    Divider()
+//                    TextField("\(patient.eitlink!)", text: $eitlink)
+                }
+                HStack {
+                    Spacer()
+                    Button("Сохранить") {
+                        DataController().editPatient(patient: patients, fullname: fullname, age: age, diagnosis: diagnosis, eitlink: eitlink, context: managedObjContext)
+                        dismiss()
+                    }
+                    Spacer()
                 }
             }
         }
