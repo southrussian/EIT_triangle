@@ -43,6 +43,15 @@ struct PatientsView: View {
                 .listStyle(.plain)
             }
             .navigationTitle("Пациенты")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showingAddView.toggle()
+                    } label: {
+                        Label("Добавить пациента", systemImage: "plus.circle")
+                    }
+                }
+            }
         }
     }
     
